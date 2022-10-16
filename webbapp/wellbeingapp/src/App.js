@@ -33,12 +33,6 @@ function App() {
    
   }
 
-  // used this useEffect just for testing purposes 
-  useEffect(()=>{
-    if(JSON.stringify(answers) !== '{}'){
-      console.log(answers)
-    }
-  } , [answers])
   
   let questionBlock =   <div className='main-container' >
                           <Question sendData = {sendData}/>
@@ -83,7 +77,7 @@ function App() {
                 </table>
 
                 <hr></hr>
-                 <p className='text'>the Current depression level (row , column) -> {'('+ info['BMU'][0]+' , '+ info['BMU'][1]+ ')'}</p>
+                 <p className='text'>the Current depression level -- {'('+ info['BMU'][0]+' , '+ info['BMU'][1]+ ')'}</p>
                  <img  className='som-image' src={output} alt="the output SOM" />
                 <hr></hr>
               </div>
